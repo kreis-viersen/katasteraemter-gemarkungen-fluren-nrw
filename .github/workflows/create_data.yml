@@ -1,0 +1,26 @@
+name: Create Data
+on:
+  schedule:
+    - cron:  '10 * * * *'
+jobs:
+  create-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkou️t
+        uses: actions/checkout@v2.3.1
+
+      - name: Create
+        run: |
+          sudo apt-get update
+          sudo apt-get install gdal-bin
+          ./create_json.sh
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: main
+          target-folder: data
+          folder: /home/runner/work/gemarkungen-fluren-nrw/gemarkungen-fluren-nrw/data
+          git-config-name: kvie-bot
+          git-config-email: open@kreis-viersen.de
+          commit-message: Update JSON
