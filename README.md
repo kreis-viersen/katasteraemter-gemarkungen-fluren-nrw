@@ -7,6 +7,7 @@ Dieses Repository dient dazu, regelmäßig und automatisch die Gemarkungen und F
 ## URL zum Abruf der JSON-Datei:
 https://kreis-viersen.github.io/gemarkungen-fluren-nrw/data/gemarkungen_fluren_nrw.json
 
+## Struktur der JSON-Datei:
 <img src="./screenshot_json.png"/>
 
 ## Lizenz der Daten
