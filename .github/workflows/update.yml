@@ -1,7 +1,7 @@
-name: Create Data
+name: Update
 on:
   schedule:
-    - cron:  '25 * * * *'
+    - cron:  '30 * * * *'
 jobs:
   create-and-deploy:
     runs-on: ubuntu-latest
