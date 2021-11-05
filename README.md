@@ -5,7 +5,7 @@
 Dieses Repository dient dazu, regelmäßig und automatisch die Gemarkungen und Fluren in NRW auf Basis der WFS-Daten von https://www.wfs.nrw.de/geobasis/wfs_nw_alkis_vereinfacht strukturiert nach Katasterbezirken im JSON-Format bereit zu stellen.
 
 ## URL zum Abruf der JSON-Datei:
-https://kreis-viersen.github.io/katasteraemter-gemarkungen-fluren-nrw/data/katasteraemter_gemarkungen_fluren_nrw.json
+https://kreis-viersen.github.io/katasteraemter-gemarkungen-fluren-nrw/data/katasteraemter-gemarkungen-fluren-nrw.json
 
 ## Struktur der JSON-Datei:
 <img src="./screenshot_json.png"/>

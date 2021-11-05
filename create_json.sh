@@ -7,6 +7,6 @@ unzip ./temp/wfsdata.zip -d ./temp/
 ogr2ogr -f GeoJSON -dialect SQLite -sql "SELECT art, name, schluessel, gmdschl FROM KatasterBezirk" ./temp/data.geojson ./temp/ALKIS-Vereinfacht/KatasterBezirk.shp
 jq -c --argfile katasteraemter katasteraemter.json '.features[] | select(.properties.art|contains("Gemarkungsteil/Flur")|not ) | {name: .properties.name | tostring, schluessel: .properties.schluessel | tostring | .[1:5], gmdschl: .properties.gmdschl | tostring | .[0:4]} | .gmdschl |= $katasteraemter[.]' ./temp/data.geojson > ./temp/gemarkungen.txt
 jq -c '.features[] | select(.properties.art|contains("Gemarkungsteil/Flur")) | {name: .properties.name | tonumber | tostring, schluessel: .properties.schluessel | tostring | .[1:5]}' ./temp/data.geojson > ./temp/fluren.txt
-jq -c -S --null-input --slurpfile gemarkungen ./temp/gemarkungen.txt --slurpfile fluren ./temp/fluren.txt 'reduce $gemarkungen[] as $i ({}; setpath([$i.gmdschl, $i.name];{schluessel: $i.schluessel, fluren: [$fluren[] | select(.schluessel == $i.schluessel).name]}))' > ./data/katasteraemter_gemarkungen_fluren_nrw.json
-md5sum ./data/katasteraemter_gemarkungen_fluren_nrw.json > ./data/katasteraemter_gemarkungen_fluren_nrw.json.md5
+jq -c -S --null-input --slurpfile gemarkungen ./temp/gemarkungen.txt --slurpfile fluren ./temp/fluren.txt 'reduce $gemarkungen[] as $i ({}; setpath([$i.gmdschl, $i.name];{schluessel: $i.schluessel, fluren: [$fluren[] | select(.schluessel == $i.schluessel).name]}))' > ./data/katasteraemter-gemarkungen-fluren-nrw.json
+md5sum ./data/katasteraemter-gemarkungen-fluren-nrw.json > ./data/katasteraemter-gemarkungen-fluren-nrw.json.md5
 rm -r temp
