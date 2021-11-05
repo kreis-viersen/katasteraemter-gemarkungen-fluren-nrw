@@ -1,7 +1,7 @@
 name: Update
 on:
   schedule:
-    - cron:  '15 3 * * *'
+    - cron:  '59 * * * *'
 jobs:
   create-and-deploy:
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
         with:
           branch: main
           target-folder: data
-          folder: /home/runner/work/gemarkungen-fluren-nrw/gemarkungen-fluren-nrw/data
+          folder: /home/runner/work/katasteraemter-gemarkungen-fluren-nrw/katasteraemter-gemarkungen-fluren-nrw/data
           git-config-name: kvie-bot
           git-config-email: open@kreis-viersen.de
           commit-message: Update JSON
