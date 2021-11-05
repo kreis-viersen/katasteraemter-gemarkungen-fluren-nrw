@@ -10,13 +10,13 @@ https://www.wfs.nrw.de/geobasis/wfs_nw_alkis_vereinfacht?SERVICE=WFS&REQUEST=Get
 
 FeatureType:<br>`ave:KatasterBezirk`
 
-## URL zum Abruf der JSON-Datei:
+## URL zum Abruf der JSON-Datei
 https://kreis-viersen.github.io/katasteraemter-gemarkungen-fluren-nrw/data/katasteraemter-gemarkungen-fluren-nrw.json
 
-## Struktur der JSON-Datei:
+## Struktur der JSON-Datei
 <img src="./screenshot_json.png"/>
 
-## Aktualisierungsrhythmus:
+## Aktualisierungsrhythmus
 
 Die JSON-Datei und die Datei mit dem zugehörigen MD5-Hashwert im Verzeichnis `data` werden bei Bedarf täglich jede Nacht automatisch aktualisiert.
 
