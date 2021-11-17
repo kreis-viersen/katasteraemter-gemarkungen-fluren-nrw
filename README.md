@@ -14,7 +14,7 @@ FeatureType:<br>`ave:KatasterBezirk`
 [https://kreis-viersen.github.io/katasteraemter-gemarkungen-fluren-nrw/data/katasteraemter-gemarkungen-fluren-nrw.json](https://kreis-viersen.github.io/katasteraemter-gemarkungen-fluren-nrw/data/katasteraemter-gemarkungen-fluren-nrw.json)
 
 ## Struktur der JSON-Datei
-<img src="./screenshot_json.png"/>
+<img src="./screenshot_json.png" width="300"/>
 
 ## Aktualisierungsrhythmus
 
