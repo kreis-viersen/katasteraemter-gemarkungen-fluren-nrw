@@ -1,7 +1,7 @@
 name: Update
 on:
   schedule:
-    - cron:  '15 3 * * *'
+    - cron:  '53 14 * * *'
 jobs:
   create-and-deploy:
     runs-on: ubuntu-latest
