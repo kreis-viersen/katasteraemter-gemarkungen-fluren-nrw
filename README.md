@@ -3,7 +3,7 @@
 [![Update](https://github.com/kreis-viersen/katasteraemter-gemarkungen-fluren-nrw/actions/workflows/update.yml/badge.svg)](https://github.com/kreis-viersen/katasteraemter-gemarkungen-fluren-nrw/actions/workflows/update.yml)
 
 Dieses Repository dient dazu, automatisch Angaben zu Gemarkungen und Fluren in NRW auf Basis von WFS-Daten von 
-[Geobasis NRW](https://www.bezreg-koeln.nrw.de/brk_internet/geobasis/index.html) strukturiert nach Katasterbezirken im JSON-Format bereit zu stellen.
+[Geobasis NRW](https://www.bezreg-koeln.nrw.de/brk_internet/geobasis/index.html) strukturiert nach Katasterbezirken im JSON-Format für den [Flurstücksfinder NRW](https://github.com/kreis-viersen/flurstuecksfinder-nrw) bereit zu stellen.
 
 Verwendeter WFS-Dienst:<br>
 [https://www.wfs.nrw.de/geobasis/wfs_nw_alkis_vereinfacht?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=1.1.0](https://www.wfs.nrw.de/geobasis/wfs_nw_alkis_vereinfacht?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=1.1.0)
