@@ -1,7 +1,7 @@
 name: Update
 on:
   schedule:
-    - cron:  '15 3 * * *'
+    - cron:  '20 5 * * *'
 jobs:
   create-and-deploy:
     runs-on: ubuntu-latest
@@ -16,7 +16,7 @@ jobs:
           ./create_json.sh
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.2.1
+        uses: JamesIves/github-pages-deploy-action@4.2.5
         with:
           branch: main
           target-folder: data
