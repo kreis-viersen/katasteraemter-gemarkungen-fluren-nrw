@@ -19,7 +19,8 @@ jobs:
           ./create_json.sh
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v4-flow
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        
         with:
           branch: main
           target-folder: data
