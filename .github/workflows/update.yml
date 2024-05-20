@@ -19,7 +19,7 @@ jobs:
           ./create_json.sh
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v4
+        uses: JamesIves/github-pages-deploy-action@releases/v4.6.1
         
         with:
           branch: main
