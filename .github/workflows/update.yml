@@ -5,6 +5,10 @@ on:
       - main
   schedule:
     - cron:  '15 3 * * *'
+
+permissions:
+  contents: read
+
 jobs:
   create-and-deploy:
     runs-on: ubuntu-latest
