@@ -22,7 +22,7 @@ jobs:
       - name: Create
         run: |
           sudo apt-get update
-          sudo apt-get install -y gdal-bin
+          sudo apt-get install -y gdal-bin jq
           ./create_json.sh
 
       - name: Commit changed data
