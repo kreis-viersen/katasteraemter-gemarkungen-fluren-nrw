@@ -1,34 +1,40 @@
 name: Update
+
 on:
   push:
-    branches:    
+    branches:
       - main
   schedule:
-    - cron:  '15 3 * * *'
+    - cron: '15 3 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  create-and-deploy:
+  create-and-update:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkou️t
+      - name: Checkout
         uses: actions/checkout@v7.0.1
 
       - name: Create
         run: |
           sudo apt-get update
-          sudo apt-get install gdal-bin
+          sudo apt-get install -y gdal-bin
           ./create_json.sh
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.9.0
-        
-        with:
-          branch: main
-          target-folder: data
-          folder: /home/runner/work/katasteraemter-gemarkungen-fluren-nrw/katasteraemter-gemarkungen-fluren-nrw/data
-          git-config-name: kvie-bot
-          git-config-email: open@kreis-viersen.de
-          commit-message: Update JSON
+      - name: Commit changed data
+        run: |
+          if git diff --quiet -- data; then
+            echo "No data changes."
+            exit 0
+          fi
+
+          git config user.name "kvie-bot"
+          git config user.email "open@kreis-viersen.de"
+
+          git add data
+          git commit -m "Update JSON"
+          git push
